@@ -1,0 +1,12 @@
+{
+    "luau-lsp.sourcemap.autogenerate": false,
+    "luau-lsp.sourcemap.enabled": false,
+    "luau-lsp.completion.autocompleteEnd": true,
+    "luau-lsp.completion.imports.enabled": true,
+    "luau-lsp.completion.enableFragmentAutocomplete": true,
+    "luau-lsp.platform.type": "standard",
+    "luau-lsp.completion.imports.requireStyle": "alwaysRelative",
+    "luau-lsp.types.definitionFiles": [
+        "globalTypes.d.luau"
+    ]
+}

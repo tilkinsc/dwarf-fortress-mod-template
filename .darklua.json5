@@ -1,0 +1,31 @@
+{
+    // $schema: "./schema.json",
+    generator: "retain_lines",
+    bundle: {
+        modules_identifier: "__MODULES__",
+        require_mode: {
+            name: "path",
+            module_folder_name: "__MODULES__",
+            sources: { "@mod": "./modules" }
+        }
+    },
+    rules: [
+        {
+            rule: "inject_global_value",
+            identifier: "DEBUG",
+            value: true
+        },
+        "remove_compound_assignment",
+        "remove_continue",
+        "remove_floor_division",
+        "remove_if_expression",
+        "remove_interpolated_string",
+        "convert_luau_number",
+        "remove_types",
+        {
+            rule: "rename_variables",
+            globals: ["$default"]
+        }
+
+    ]
+}

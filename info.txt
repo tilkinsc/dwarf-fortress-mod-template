@@ -1,0 +1,8 @@
+[ID:my_first_mod]
+[NAME:My First Mod]
+[NUMERIC_VERSION:10]
+[DISPLAYED_VERSION:1.0]
+[EARLIEST_COMPATIBLE_NUMERIC_VERSION:10]
+[EARLIEST_COMPATIBLE_DISPLAYED_VERSION:10]
+[AUTHOR:tilkinsc]
+[DESCRIPTION:This is an example mod. This text shows up in-game.]

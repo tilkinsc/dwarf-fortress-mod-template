@@ -1,4 +1,12 @@
 
+# black magic files
 .vscode
+.env
+.env.*
+
+# contributor files
 *.log
-./schema.json
+
+# my files
+darklua
+schema.json

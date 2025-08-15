@@ -1,0 +1,40 @@
+{
+    "generator": "retain_lines",
+    "bundle": {
+        "modules_identifier": "__DARKLUA__BUNDLE__MODULES__",
+        "excludes": [],
+        "require_mode": {
+            "name": "path",
+            "module_folder_name": "init",
+            "sources": {
+                "pkg": "./Packages"
+            },
+            "use_luau_configuration": true
+        }
+    },
+    "rules": [
+        "compute_expression",
+        "convert_index_to_field",
+        "convert_luau_number",
+        "convert_square_root_call",
+        "filter_after_early_return",
+        "remove_assertions",
+        "remove_comments",
+        "remove_compound_assignment",
+        "remove_continue",
+        "remove_debug_profiling",
+        "remove_empty_do",
+        "remove_floor_division",
+        "remove_if_expression",
+        "remove_interpolated_string",
+        "remove_nil_declaration",
+        "remove_types",
+        "remove_unused_if_branch",
+        "remove_unused_variable",
+        "remove_unused_while",
+        {
+            "rule": "rename_variables",
+            "globals": ["$default"]
+        }
+    ]
+}
