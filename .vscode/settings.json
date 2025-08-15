@@ -7,6 +7,6 @@
     "luau-lsp.platform.type": "standard",
     "luau-lsp.completion.imports.requireStyle": "alwaysRelative",
     "luau-lsp.types.definitionFiles": [
-        "globalTypes.d.luau"
+        "mod.d.luau"
     ]
 }

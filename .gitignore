@@ -1,6 +1,5 @@
 
 # black magic files
-.vscode
 .env
 .env.*
 
