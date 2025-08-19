@@ -8,10 +8,7 @@ type void = nil;
 
 type RandomSphereNoun = { str: string; flags: { OF: boolean?, PREPOS: boolean?, PRE: boolean? }? }
 type Weighted = { weight: number }
-
 type UnitResult = { good: boolean, info: string }
-
-
 
 -- .darklua*.json5
 declare DEBUG: boolean;
