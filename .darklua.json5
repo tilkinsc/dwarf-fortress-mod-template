@@ -3,11 +3,10 @@
     generator: "retain_lines",
     bundle: {
         modules_identifier: "__MODULES__",
-        excludes: [ "@self/**" ],
+        excludes: [ "@self/**", "src/**" ],
         require_mode: {
             name: "path",
             sources: {
-                "@self": "scripts/",
                 "@mod": "modules/"
             }
         }
@@ -19,7 +18,6 @@
                 name: "path",
                 module_folder_name: "__MODULES__",
                 sources: {
-                    "@self": "scripts/",
                     "@mod": "modules/"
                 }
             },
