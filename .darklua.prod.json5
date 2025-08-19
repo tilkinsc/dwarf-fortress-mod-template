@@ -1,0 +1,66 @@
+{
+    // $schema: "./schema.json",
+    generator: "dense",
+    bundle: {
+        modules_identifier: "__MODULES__",
+        excludes: [ "@self/**" ],
+        require_mode: {
+            name: "path",
+            sources: {
+                "@self": "scripts/",
+                "@mod": "modules/"
+            }
+        }
+    },
+    rules: [
+        {
+            rule: "convert_require",
+            current: {
+                name: "path",
+                module_folder_name: "__MODULES__",
+                sources: {
+                    "@self": "scripts/",
+                    "@mod": "modules/"
+                }
+            },
+            target: { name: "path" }
+        },
+        {
+            rule: "inject_global_value",
+            identifier: "DEBUG",
+            value: false
+        },
+        "remove_types",
+        "remove_comments",
+        {
+            rule: "remove_assertions",
+            preserve_arguments_side_effects: false
+        },
+        {
+            rule: "remove_debug_profiling",
+            preserve_arguments_side_effects: false
+        },
+        "remove_compound_assignment",
+        "convert_luau_number",
+        "convert_index_to_field",
+        "group_local_assignment",
+        "remove_if_expression",
+        "remove_floor_division",
+        "convert_square_root_call",
+        "remove_continue",
+        "remove_interpolated_string",
+        "compute_expression",
+        "remove_nil_declaration",
+        "filter_after_early_return",
+        "remove_unused_variable",
+        "remove_unused_if_branch",
+        {
+            rule: "rename_variables",
+            globals: ["$default"]
+        },
+        "remove_empty_do",
+        "remove_unused_while",
+        "remove_function_call_parens",
+        "remove_spaces"
+    ]
+}

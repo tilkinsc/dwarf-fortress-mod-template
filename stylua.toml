@@ -1,0 +1,15 @@
+# Line length
+column_width = 120
+
+# Function spacing
+space_after_function_name = false
+
+# Table formatting
+table_separator = "Comma"
+line_endings = "Unix"
+force_multiline_tables = false
+
+# Spacing
+space_around_operators = true
+space_inside_braces = true
+space_after_comma = true

@@ -1,0 +1,15 @@
+# Spacing
+spaces_around_operators: true
+space_after_function_name: false
+space_after_comma: true
+space_inside_table_braces: true
+
+# Line breaks
+column_limit: 120
+break_after_functiondef_lp: false
+break_after_functioncall_lp: false
+break_before_else: true
+
+# Tables
+align_table_field: false
+keep_simple_table_one_line: true

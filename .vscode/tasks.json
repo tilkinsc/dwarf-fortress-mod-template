@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build all files (debug)",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/src"
+			},
+			"command": "darklua process ../src ../output",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Build all files (production)",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/src"
+			},
+			"command": "darklua process ../src ../output --config darklua.prod.json",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Watch for changes and build",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/src"
+			},
+			"command": "darklua process ../src ../output --watch",
+			"isBackground": true,
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Logging",
+			"type": "shell",
+			"command": "./log.sh",
+			"group": "none",
+			"problemMatcher": []
+		}
+	]
+}
