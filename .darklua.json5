@@ -3,29 +3,40 @@
     generator: "retain_lines",
     bundle: {
         modules_identifier: "__MODULES__",
+        excludes: [ "@self/**" ],
         require_mode: {
             name: "path",
-            module_folder_name: "__MODULES__",
-            sources: { "@mod": "./modules" }
+            sources: {
+                "@self": "scripts/",
+                "@mod": "modules/"
+            }
         }
     },
     rules: [
+        {
+            rule: "convert_require",
+            current: {
+                name: "path",
+                module_folder_name: "__MODULES__",
+                sources: {
+                    "@self": "scripts/",
+                    "@mod": "modules/"
+                }
+            },
+            target: { name: "path" }
+        },
         {
             rule: "inject_global_value",
             identifier: "DEBUG",
             value: true
         },
+        "remove_comments",
         "remove_compound_assignment",
         "remove_continue",
         "remove_floor_division",
         "remove_if_expression",
         "remove_interpolated_string",
         "convert_luau_number",
-        "remove_types",
-        {
-            rule: "rename_variables",
-            globals: ["$default"]
-        }
-
+        "remove_types"
     ]
 }

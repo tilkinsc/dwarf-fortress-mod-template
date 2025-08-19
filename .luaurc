@@ -2,5 +2,8 @@
     "languageMode": "strict",
     "lint": { "*": true },
     "lintErrors": true,
-    "typeErrors": true
+    "aliases": {
+        "self": "src",
+        "mod": "modules"
+    }
 }
